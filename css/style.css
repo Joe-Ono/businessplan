@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .top-title {
+    font-family: 'Caveat', serif;
+}
+
+/* Header */
+#site-header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #3333339a;
+}
+
+#site-logo {
+    margin-left: 20px;
+}
+
+#site-logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav-menu {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-menu-items {
+    margin-right: 30px;
+}
+
+.nav-menu-items a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* SlideShow */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.swiper-slide {
+    display: inline-block;
+    position: relative;
+}
+
+.swiper-slide::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(241, 183, 207, 0.644)
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 40vh;
+    align-items: center; 
+    object-fit: fill;
+}
+
+
+.top-title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 6rem;
+    z-index: 1;
+}
+
+/* Description */
+.description-text {
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.4rem;
+}
+
+/* SubTitle */
+.sub-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0 2rem;
+}
+
+/* business */
+.businesses {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.business {
+    margin: 0 auto;
+    width: 30%;
+    min-width: 260px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#business-img {
+    width: 320px;
+    height: 320px;
+    padding: 0 4rem;
+}
+#business-img img {
+    width: 100%;
+    min-width: 375px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 100%;
+    border-radius: 20%;
+}
+
+#business-text {
+    font-size: large;
+    max-width: 704px;
+    line-height: 1rem;
+    padding: 0 1rem;
+}
+
+/* actionss */
+.checks {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.check {
+    margin: 0 auto;
+    width: 30%;
+    min-width: 260px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.check-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: lighter;
+}
+
+.check-text {
+    font-size: large;
+}
+
+.check-img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 2rem 0;
+}
+
+.actions {
+    width: auto;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;    
+    flex-flow: column;
+}
+
+/* .action {
+    margin: 0 auto;
+    width: auto; 
+    min-width: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: :center;
+    text-align: center;            
+    align-items: baseline;
+    padding: 0 1rem;
+} */
+
+.caluculate {
+    width: 80%;
+    position: relative;
+    z-index: 1;
+}
+#grossprofit_table {
+    width: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    border: 2px #808080 solid;
+    border-radius: 2px;
+    margin: 2rem 0;
+}
+#grossprofit_table th {
+    width: 150px;
+}
+#grossprofit_table td, #grossprofit_table td input{
+    width: 120px;
+    text-align: right;
+}
+.humanexpences {
+    width: 85%;
+    font-size: 0.76rem;
+    border: 2px #808080 solid;
+    border-radius: 2px;
+    margin: 2rem 0;
+}
+.sellingexpences-table {
+    font-size: 12px;
+    border: 2px #808080 solid;
+}
+.sellingexpences-table th, .sellingexpences-table td, .sellingexpences-table td input {
+    width: 90px;
+}
+
+#cal_anker {
+    position: absolute;
+    top: -160px;
+}
+
+#depreciation-table {
+    font-size: 0.78rem;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    border: 2px #808080 solid;
+    margin: 1.5rem 0;
+}
+#depreciation-table th, #depreciation-table td, #depreciation-table td input, #depreciation-table td select {
+    width: 70px;
+}
+.fund-simulation-table {
+    font-size: 0.78rem;
+    text-align: center;
+    /* align-items: center; */
+    width: 95%;
+    border: 2px #808080 solid;
+    /* margin: 1.5rem 0; */
+}
+.fund-simulation-table th {
+    width: 135px;
+}
+.fund-simulation-table td input{
+    width: 100px;
+}
+
+#csv_data_table {
+    align-items: center;
+    /* text-align: right; */
+    justify-content: space-between;
+    /* font-size: 0.76rem; */
+    width: 100%;
+    border: 2px #808080 solid;
+    border-radius: 5px;
+}
+
+#csv_data_table th {
+    font-size: 0.72rem;
+    width: auto;
+    text-align: left;    
+}
+#csv_data_table td, #csv_data_table td input {
+    font-size: 0.76rem;
+    width: 95px;
+    text-align: right;
+}
+#years_pl_table {
+    font-size: 0.76rem;
+    width: 120%;
+    border: 2px #808080 solid;
+    border-radius: 5px;
+    /* margin: 2rem 0; */
+}
+#years_pl_table th {
+    width: 70px;
+}
+#years_pl_table td input {
+    width: 80px;
+}
+td, th { border: 2px #808080 solid;
+
+}
+
+/* .results {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+} */
+.result {
+    margin: 0 auto;
+    width: 100%;
+    /* min-width: 300px; */
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: baseline;
+    padding: 01rem;
+}
+.incomeexpenditure {
+    margin: 0 auto;
+    width: 90%;
+    /* min-width: 300px; */
+    display: flex;
+    justify-content:center;
+    flex-flow: column;
+    align-items: baseline;
+    padding: 01rem;
+}
+#balancesheet {
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+}
+#balancesheet-table {
+    width: 1190px;
+    border: 2px #808080 solid;
+    flex-flow: column;
+    text-align: left;
+    align-items: baseline;
+    margin: 1rem 0;
+}
+#balancesheet-table th, #balancesheet-table td, #balancesheet-table td input, #balancesheet-table td  contenteditable {
+    width: 180px;
+}
+#spread-table th, #spread-table td, #spread-table td input, #spread-table td select {
+    width: 85px;
+}
+
+.decisions {
+    max-width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+/* Footer */
+#site-footer {
+    margin-top: 6rem;
+    background-color: #333;
+    width: 100%;
+    height: 60px;
+}
+
+#copyright {
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}

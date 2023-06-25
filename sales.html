@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>【デモ】HTMLTableElement.rows - 全ての行</title>
+		<link rel="canonical" href="https://syncer.jp/Web/API_Interface/Reference/IDL/HTMLTableElement/rows/">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<meta name="keywords" content="創業、事業計画、損益計算書、貸借対照表、キャッシュフロー、経費、売上、資産、減価償却、利益">
+		<script src="https://demo.syncer.jp/js/demo-web_api_interface.js"></script>
+		<script>
+window.addEventListener( "load", function () {
+	syncer.setup ( {
+		property: {
+			get: {
+				use: true ,
+				callback: (typeof getProperty === "function" ? getProperty : null) ,
+				observe: false ,
+			} ,
+		} ,
+		error: {
+			use: true ,
+		} ,
+		console: {
+			use: true ,
+		} ,
+		htmlElement: {
+			use: true ,
+			elements: [ {
+				element: document.getElementById( "hoge" ) ,
+				content: true ,
+			} ] ,
+		} ,
+	} ) ;
+} ) ;
+		</script>
+		<style>
+			body {
+				font: 400 15px/1.618 -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, メイリオ, meiryo, sans-serif ;
+				background-color: #fff ;
+			}
+
+			table {
+				border-collapse: collapse ;
+				background-color: #e0e0e0 ;
+			}
+
+			table, th, td {
+				border: 1px solid #000 ;
+			}
+
+			td {
+				background-color: #fff ;
+			}
+
+			th {
+				background-color: #fffff0 ;
+			}
+		</style>
+	</head>
+	<body>
+
+<p>下記のtable要素のrowsの値を取得します。</p>
+
+<table>
+	<tr><td><input type="text" name="depreciation1_1"></td><td><input type="text" name="depreciation1_2"></td></tr>
+    <tr><td><input type="text" name="depreciation2_1"></td><td><input type="text" name="depreciation2_2"></td></tr>
+    <tr><td><input type="text" name="depreciation3_1"></td><td><input type="text" name="depreciation3_2"></td></tr>
+    <tr><td><input type="text" name="depreciation4_1"></td><td><input type="text" name="depreciation4_2"></td></tr>
+    <tr><td><input type="text" name="depreciation5_1"></td><td><input type="text" name="depreciation5_2"></td></tr>
+    <tr><td><input type="text" name="sum1"></td><td><input type="text" name="sum2"></td></tr>
+</table>
+
+<script>
+    <!-- テーブルの要素を取得 -->
+    var table = document.querySelector("table");
+    <!-- テーブル内のinput要素を取得 -->
+    var inputs = table.querySelectorAll("input");
+    <!-- 配列を初期化 -->
+    var depreciation1 = [];
+    var depreciation2 = [];
+    <!-- input要素の数だけループ -->
+     for (var i = 0; i < inputs.length; i++) {
+        var name = inputs[i].getAttribute("name");
+        var index = parseInt(name.charAt(12)) - 1;
+        if (name.endsWith("_1")) {
+          depreciation1[index] = Number(inputs[i].value);
+        } else if (name.endsWith("_2")) {
+          depreciation2[index] = Number(inputs[i].value);
+        }
+      }
+      console.log(depreciation1);
+      console.log(depreciation2);
+    
+</script>
+
+	</body>
+</html>
+

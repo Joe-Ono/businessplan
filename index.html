@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="創業したい人のためのウェブサイトです。簡単にあなたのビジネスが儲かるか判断します。">
+    <meta name="keywords" content="創業、事業計画、損益計算書、貸借対照表、キャッシュフロー、経費、売上、資産、減価償却、利益">
+
+    <title>創業Lab</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="site-header">
+        <h1 id="site-logo"><a href="">さあ！！<br>皆で創業しよう！！</a></h1>
+        <nav>
+            <ul id="nav-menu">
+                <li class="nav-menu-items"><a href="#cal_anker">1,　売上</a></li>
+                <li class="nav-menu-items"><a href="#ge_anker">2,　販売費および一般管理費</a></li>
+                <li class="nav-menu-items"><a href="#ass_anker">3,　資産</a></li>
+                <li class="nav-menu-items"><a href="#pl_anker">4,　損益計算書</a></li>
+                <li class="nav-menu-items"><a href="#income_anker">5,　貸借対照表</a></li>
+                <li class="nav-menu-items"><a href="#income_anker">6,　５年間の収益計画</a></li>
+                <li class="nav-menu-items"><a href="#dec_anker">7,　それでは！</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/wannado.png"></div>
+            <div class="swiper-slide"><img src="img/number.png"></div>
+            <div class="swiper-slide"><img src="img/profit.png"></div>
+            right<div class="swiper-slide"><img src="img/unique.png"></div>
+        </div>
+        <div class="top-title">Check it up!</div>
+    </div>
+
+    <h2 class="sub-title">こんな不安を持ってませんか？</h2>
+    <div class="businesses">
+        <div class="business">
+            <div id="business-img">
+                <img src="img/designer2.png" alt="business-photo">
+            </div>
+            <div id="business-text">
+                <p>今までの経験・知識を活かしたい</p>
+                <P>自由に仕事がしたい</P>
+                <p><br>でも収入が見通せない</p>
+            </div>
+        </div>
+        <div class="business">
+            <div id="business-img">
+                <img src="img/variety_store3.png" alt="business-photo">
+            </div>
+            <div id="business-text">
+                <p>やりたいことは決まってる</p>
+                <P>地元に貢献したい</P>
+                <P>ある程度ビジネスの輪郭は決まった</P>
+                <p><br>でも利益が安定して確保できる？</p>
+            </div>
+        </div>
+        <div class="business">
+            <div id="business-img">
+                <img src="img/restaurant2.png" alt="business-photo">
+            </div>
+            <div id="business-text">
+                <p>すぐにでもやりたい事業がある</p>
+                <P>でも元手が足りない</P>
+                <p><br>融資を受けて返済できる？</p>
+                <P>補助金が適用される？</P>
+            </div>
+        </div>
+    </div>
+
+    <!-- checks -->
+    <hr class="rule" id="checks">
+    <h2 class="sub-title">そんな不安を払拭します</h2>
+    <div class=checks>
+        <div class="check">
+            <img class="check-img" src="img/input.png">
+            <h3 class="check-title">入力項目は<br>こ・れ・だ・け！</h3>
+            <p>
+                何をどれだけ売るか？<br>原価はいくらだろう<br>どんな設備を準備する？<br>毎月かかる経費は？<br><br>あとは結果をご覧じろ
+            </p>
+        </div>
+        <div class="check">
+            <img class="check-img" src="img/sales.jpeg">
+            <h3 class="check-title">収支計画とは？</h3>
+            <p>
+                事業に関わるお金を数字でその流れを把握する<br>1,売上…顧客単価x顧客数　など<br>2,費用…人件費、商品原価、光熱費、広告宣伝費、減価償却費、等々<br>3,利益　＝　売上　ー　費用
+            </p>
+        </div>
+        <div class="check">
+            <img class="check-img" src="img/free.png">
+            <h3 class="check-title">なんたって、<br>無料で正確</h3>
+            <p>
+                自分が知り合いの事業再構築補助金の事業計画を手伝って作ろうとしてwebを見たけど、『では、後でご自分でこの計算をしてください』とあって、その計算が結構面倒でした。で素人ながら、皆さんが簡単に計算できる様にって作ったものなので無料です。
+            </p>
+        </div>
+    </div>
+                
+    <h2 class="sub-title">Let's try！</h2>
+    <div class="actions">
+        <div class="action">
+            <div class="caluculate">
+                <div id="action-text">
+                    <form name="salesayear">
+                        <h2>1、先ずは年間の売上と売上原価から<br>
+                        例えば喫茶店などサービス業の場合の計算<br>（週１日定休日があるとして）<br></h2>
+                        「年間売上　＝　来店数/1日　ｘ　客単価　ｘ　26日/月　ｘ　12ヶ月」<br>
+                        　来　店　客　数/　1日:<input type="text" name="salesayearNoc">-<br>
+                        　　客　　単　　価　　:<input type="text" name="salesayearCup">-<input type="button" value="計算" onclick="fncGROSSPROFIT()"><br>
+                        　　年　間　売　上　　:<input type="text" name="salesayearAns"><br>
+                        珈琲豆原価30%、廃棄率4%、開発使用1%で商品原価35%で計算すると<br>
+                        年　間　売　上　原　価:<input type="text" name="productcostAns"><br>
+                        　売　上　総　利　益　:<input type="text" name="grossprofitAns">
+                    </form>
+                </div>
+                <table id="grossprofit_table">
+                    <form name="profit">
+                        <thead>
+                            <tr><th>　　科　目　　</th><th>入力or自動計算</th><td>1年目</td><td>2年目</td><td>3年目</td><td>4年目</td><td>5年目</td><td>6年目</td></tr>
+                            <tr><th>来店客数/日</th><td><input type="button" value="入力"></td><td><input type="text" name="salesayearNoc_0"></td><td><input type="text" name="salesayearNoc_1"></td><td><input type="text" name="salesayearNoc_2"></td><td><input type="text" name="salesayearNoc_3"></td><td><input type="text" name="salesayearNoc_4"></td><td><input type="text" name="salesayearNoc_5"></td></tr>
+                            <tr><th>客単価</th><td><input type="button" value="入力"></td><td><input type="text" name="salesayearCup_0"></td><td><input type="text" name="salesayearCup_1"></td><td><input type="text" name="salesayearCup_2"></td><td><input type="text" name="salesayearCup_3"></td><td><input type="text" name="salesayearCup_4"></td><td><input type="text" name="salesayearCup_5"></td></tr>
+                            <tr><th>計算上売上高</th><td><input type="button" value="ここをクリック" onclick="fncSALESAYEAR()"></td><td><input type="text" name="salesayearAns_0"></td><td><input type="text" name="salesayearAns_1"></td><td><input type="text" name="salesayearAns_2"></td><td><input type="text" name="salesayearAns_3"></td><td><input type="text" name="salesayearAns_4"></td><td><input type="text" name="salesayearAns_5"></td></tr>
+                            <tr><th>調整後売上高目標値</th><td><input type="button" value="入力"></td><td><input type="text" name="salesayearTarget_0"></td><td><input type="text" name="salesayearTarget_1"></td><td><input type="text" name="salesayearTarget_2"></td><td><input type="text" name="salesayearTarget_3"></td><td><input type="text" name="salesayearTarget_4"></td><td><input type="text" name="salesayearTarget_5"></td></tr>
+                            <tr><th>商品原価率(%)</th><td><input type="button" value="入力"></td><td><input type="text" name="productcostRate_0"></td><td><input type="text" name="productcostRate_1"></td><td><input type="text" name="productcostRate_2"></td><td><input type="text" name="productcostRate_3"></td><td><input type="text" name="productcostRate_4"></td><td><input type="text" name="productcostRate_5"></td></tr>
+                            <tr><th>売上原価</th><td><input type="button" value="ここをクリック" onclick="fncGROSSPROFIT5()"></td><td><input type="text" name="productcostAns_0"></td><td><input type="text" name="productcostAns_1"></td><td><input type="text" name="productcostAns_2"></td><td><input type="text" name="productcostAns_3"></td><td><input type="text" name="productcostAns_4"></td><td><input type="text" name="productcostAns_5"></td></tr>
+                            <tr><th>売上総利益</th><td><input type="button" value="自動計算"></td><td><input type="text" name="grossprofitAns_0"><td><input type="text" name="grossprofitAns_1"></td><td><input type="text" name="grossprofitAns_2"></td><td><input type="text" name="grossprofitAns_3"></td><td><input type="text" name="grossprofitAns_4"></td><td><input type="text" name="grossprofitAns_5"></td></tr>
+                        </thead>
+                    </form>
+                </table><br>計算上の年間売上は--<input type="button" value="計算" onclick="fncSALESAYEAR()"><br>
+                調整した売上目標と商品原価率を記入した売上総利益の計算結果は<input type="button" value="計算" onclick="fncGROSSPROFIT5()"><br>
+                <div class="sales">
+                    <h3>売上の考え方については、こちらで検討<br><p>Web：<a href="sales.html"target="_blank">いくつかの業種例</a></p></h3>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="action">
+            <div name="generalexpences">
+            <h2>2、誰と仕事を始めるか？人件費について考えよう<br>
+                    （例えば喫茶店などサービス業の場合の計算）<br></h2>
+                    ①役員報酬<br>
+                    ②社員（正社員、契約社員）給与<br>
+                    ③アルバイト賃金<br>
+                    <br>
+            </div>
+                <h2>人件費</h2>
+            <table class="humanexpences">
+                <thead>
+                    <tr><th>番号</th><th>　　勘　定　科　目　　</th><th>基準年度</th><th>1年目</th><th>2年目</th><th>3年目</th><th>4年目</th><th>5年目</th></tr>
+                    <tr><td>1</td><td contenteditable="true">役員報酬</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                    <tr><td>2</td><td contenteditable="true">人件費</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                    <tr><td>3</td><td contenteditable="true">研修費</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                    <tr><td>4</td><td contenteditable="true">採用雑誌掲載</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                    <tr><td>5</td><td contenteditable="true">採用チラシポスタ</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                    <tr><td>6</td><td contenteditable="true">採用ポスティング</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+                </thead>
+            </table>
+        </div> -->
+        <div class="action">
+            <div>
+                <div class="asset">
+                    <div id="ass_anker"></div>
+                    <div class="asset-text">
+                            <h2>3、開業するのに必要な資産は？<br>
+                                （例えば喫茶店などサービス業の場合の計算）<br>
+                                店舗関係、事務所関係、１０万円以上の固定資産</h2>
+                                ①減価償却資産の品目（店舗内装、エスプレッソマシン、パソコン等）<br>
+                                ②取得価格<br>
+                                ③償却法（定額法または定率法）<br>
+                                ④減価償却期間（下記リンクから償却年数を確認してください）<p>Web：<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/pdf/2100_01.pdf">国税庁、主な減価償却資産の耐用年数表</a></p><br>
+                                『建物』『建物附属設備』『構築物』『ソフトウェア』に関しては、法人も個人事業主も減価償却は定額法で計算するように定められています。<br>その他については、このサイトでは定率法で計算する事とします。
+                        <form name="depreciation">  
+                            <table id="depreciation-table">
+                                <div>まずは、資産の名前と取得金額を入力</div>
+                                <tr><th>番号</th><th>品目名</th><th>取得金額</th><th>減価償却期間</th><th>初年度償却額</th><th>2年目償却額</th><th>3年目償却額</th><th>4年目償却額</th><th>5年目償却額</th><th>6年目償却額</th><th>1年目残価</th><th>2年目残価</th><th>3年目残価</th><th>4年目残価</th><th>5年目残価</th><th>6年目残価</th></tr>
+                                <tr><td>1</td><td>例）事務所<input type="text" name="asset1"></td><td><input type="text" name="residualvalue1"></td><td><input type="text" name="period1"></td><td><input type="text" name="depreciation1_1"></td><td><input type="text" name="depreciation1_2"></td><td><input type="text" name="depreciation1_3"></td><td><input type="text" name="depreciation1_4"></td><td><input type="text" name="depreciation1_5"></td><td><input type="text" name="depreciation1_6"></td><td><input type="text" name="residualvalue1_1"><td><input type="text" name="residualvalue1_2"></td><td><input type="text" name="residualvalue1_3"></td><td><input type="text" name="residualvalue1_4"></td><td><input type="text" name="residualvalue1_5"></td><td><input type="text" name="residualvalue1_6"></td></tr>
+                                <tr><td>2</td><td><input type="text" name="asset2"></td><td><input type="text" name="residualvalue2"></td><td><input type="text" name="period2"></td><td><input type="text" name="depreciation2_1"></td><td><input type="text" name="depreciation2_2"></td><td><input type="text" name="depreciation2_3"></td><td><input type="text" name="depreciation2_4"></td><td><input type="text" name="depreciation2_5"></td><td><input type="text" name="depreciation2_6"></td><td><input type="text" name="residualvalue2_1"><td><input type="text" name="residualvalue2_2"></td><td><input type="text" name="residualvalue2_3"></td><td><input type="text" name="residualvalue2_4"></td><td><input type="text" name="residualvalue2_5"></td><td><input type="text" name="residualvalue2_6"></td></tr>
+                                <tr><td>3</td><td><input type="text" name="asset3"></td><td><input type="text" name="residualvalue3"></td><td><input type="text" name="period3"></td><td><input type="text" name="depreciation3_1"></td><td><input type="text" name="depreciation3_2"></td><td><input type="text" name="depreciation3_3"></td><td><input type="text" name="depreciation3_4"></td><td><input type="text" name="depreciation3_5"></td><td><input type="text" name="depreciation3_6"></td><td><input type="text" name="residualvalue3_1"><td><input type="text" name="residualvalue3_2"></td><td><input type="text" name="residualvalue3_3"></td><td><input type="text" name="residualvalue3_4"></td><td><input type="text" name="residualvalue3_5"></td><td><input type="text" name="residualvalue3_6"></td></tr>
+                                <tr><td>4</td><td><input type="text" name="asset4"></td><td><input type="text" name="residualvalue4"></td><td><input type="text" name="period4"></td><td><input type="text" name="depreciation4_1"></td><td><input type="text" name="depreciation4_2"></td><td><input type="text" name="depreciation4_3"></td><td><input type="text" name="depreciation4_4"></td><td><input type="text" name="depreciation4_5"></td><td><input type="text" name="depreciation4_6"></td><td><input type="text" name="residualvalue4_1"><td><input type="text" name="residualvalue4_2"></td><td><input type="text" name="residualvalue4_3"></td><td><input type="text" name="residualvalue4_4"></td><td><input type="text" name="residualvalue4_5"></td><td><input type="text" name="residualvalue4_6"></td></tr>
+                                <tr><td>5</td><td><input type="text" name="asset5"></td><td><input type="text" name="residualvalue5"></td><td><input type="text" name="period5"></td><td><input type="text" name="depreciation5_1"></td><td><input type="text" name="depreciation5_2"></td><td><input type="text" name="depreciation5_3"></td><td><input type="text" name="depreciation5_4"></td><td><input type="text" name="depreciation5_5"></td><td><input type="text" name="depreciation5_6"></td><td><input type="text" name="residualvalue5_1"><td><input type="text" name="residualvalue5_2"></td><td><input type="text" name="residualvalue5_3"></td><td><input type="text" name="residualvalue5_4"></td><td><input type="text" name="residualvalue5_5"></td><td><input type="text" name="residualvalue5_6"></td></tr>
+                                <tr><td>6</td><td><input type="text" name="asset6"></td><td><input type="text" name="residualvalue6"></td><td><input type="text" name="period6"></td><td><input type="text" name="depreciation6_1"></td><td><input type="text" name="depreciation6_2"></td><td><input type="text" name="depreciation6_3"></td><td><input type="text" name="depreciation6_4"></td><td><input type="text" name="depreciation6_5"></td><td><input type="text" name="depreciation6_6"></td><td><input type="text" name="residualvalue6_1"><td><input type="text" name="residualvalue6_2"></td><td><input type="text" name="residualvalue6_3"></td><td><input type="text" name="residualvalue6_4"></td><td><input type="text" name="residualvalue6_5"></td><td><input type="text" name="residualvalue6_6"></td></tr>
+                                <tr><td>7</td><td><input type="text" name="asset7"></td><td><input type="text" name="residualvalue7"></td><td><input type="text" name="period7"></td><td><input type="text" name="depreciation7_1"></td><td><input type="text" name="depreciation7_2"></td><td><input type="text" name="depreciation7_3"></td><td><input type="text" name="depreciation7_4"></td><td><input type="text" name="depreciation7_5"></td><td><input type="text" name="depreciation7_6"></td><td><input type="text" name="residualvalue7_1"><td><input type="text" name="residualvalue7_2"></td><td><input type="text" name="residualvalue7_3"></td><td><input type="text" name="residualvalue7_4"></td><td><input type="text" name="residualvalue7_5"></td><td><input type="text" name="residualvalue7_6"></td></tr>
+                                <tr><td>8</td><td><input type="text" name="asset8"></td><td><input type="text" name="residualvalue8"></td><td><input type="text" name="period8"></td><td><input type="text" name="depreciation8_1"></td><td><input type="text" name="depreciation8_2"></td><td><input type="text" name="depreciation8_3"></td><td><input type="text" name="depreciation8_4"></td><td><input type="text" name="depreciation8_5"></td><td><input type="text" name="depreciation8_6"></td><td><input type="text" name="residualvalue8_1"><td><input type="text" name="residualvalue8_2"></td><td><input type="text" name="residualvalue8_3"></td><td><input type="text" name="residualvalue8_4"></td><td><input type="text" name="residualvalue8_5"></td><td><input type="text" name="residualvalue8_6"></td></tr>
+                                <tr><td>9</td><td><input type="text" name="asset9"></td><td><input type="text" name="residualvalue9"></td><td><input type="text" name="period9"></td><td><input type="text" name="depreciation9_1"></td><td><input type="text" name="depreciation9_2"></td><td><input type="text" name="depreciation9_3"></td><td><input type="text" name="depreciation9_4"></td><td><input type="text" name="depreciation9_5"></td><td><input type="text" name="depreciation9_6"></td><td><input type="text" name="residualvalue9_1"><td><input type="text" name="residualvalue9_2"></td><td><input type="text" name="residualvalue9_3"></td><td><input type="text" name="residualvalue9_4"></td><td><input type="text" name="residualvalue9_5"></td><td><input type="text" name="residualvalue9_6"></td></tr>
+                                <tr><td>10</td><td><input type="text" name="asset10"></td><td><input type="text" name="residualvalue10"></td><td><input type="text" name="period10"></td><td><input type="text" name="depreciation10_1"></td><td><input type="text" name="depreciation10_2"></td><td><input type="text" name="depreciation10_3"></td><td><input type="text" name="depreciation10_4"></td><td><input type="text" name="depreciation10_5"></td><td><input type="text" name="depreciation10_6"></td><td><input type="text" name="residualvalue10_1"><td><input type="text" name="residualvalue10_2"></td><td><input type="text" name="residualvalue10_3"></td><td><input type="text" name="residualvalue10_4"></td><td><input type="text" name="residualvalue10_5"></td><td><input type="text" name="residualvalue10_6"></td></tr>
+                                <tr><td>11</td><td><input type="text" name="asset11"></td><td><input type="text" name="residualvalue11"></td><td><input type="text" name="period11"></td><td><input type="text" name="depreciation11_1"></td><td><input type="text" name="depreciation11_2"></td><td><input type="text" name="depreciation11_3"></td><td><input type="text" name="depreciation11_4"></td><td><input type="text" name="depreciation11_5"></td><td><input type="text" name="depreciation11_6"></td><td><input type="text" name="residualvalue11_1"><td><input type="text" name="residualvalue11_2"></td><td><input type="text" name="residualvalue11_3"></td><td><input type="text" name="residualvalue11_4"></td><td><input type="text" name="residualvalue11_5"></td><td><input type="text" name="residualvalue11_6"></td></tr>
+                                <tr><td>12</td><td><input type="text" name="asset12"></td><td><input type="text" name="residualvalue12"></td><td><input type="text" name="period12"></td><td><input type="text" name="depreciation12_1"></td><td><input type="text" name="depreciation12_2"></td><td><input type="text" name="depreciation12_3"></td><td><input type="text" name="depreciation12_4"></td><td><input type="text" name="depreciation12_5"></td><td><input type="text" name="depreciation12_6"></td><td><input type="text" name="residualvalue12_1"><td><input type="text" name="residualvalue12_2"></td><td><input type="text" name="residualvalue12_3"></td><td><input type="text" name="residualvalue12_4"></td><td><input type="text" name="residualvalue12_5"></td><td><input type="text" name="residualvalue12_6"></td></tr>
+                                <tr><td>-</td><td>合計</td><td><input type="text" name="residualvalueSum_0"></td><td>--</td><td><input type="text" name="depreciationSum_1"></td><td><input type="text" name="depreciationSum_2"></td><td><input type="text" name="depreciationSum_3"></td><td><input type="text" name="depreciationSum_4"></td><td><input type="text" name="depreciationSum_5"></td><td><input type="text" name="depreciationSum_6"></td><td><input type="text" name="residualvalueSum_1"></td><td><input type="text" name="residualvalueSum_2"></td><td><input type="text" name="residualvalueSum_3"></td><td><input type="text" name="residualvalueSum_4"></td><td><input type="text" name="residualvalueSum_5"></td><td><input type="text" name="residualvalueSum_6"></td></tr>
+                            </table>
+                            <div>それぞれの資産の償却金額と残価は--<input type="button" value="計算" onclick="fncDEPRECIATION()"><br>                 
+                                <br>合計すると--<input type="button" value="計算" onclick="fncSUM()"><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action">
+            <div class="fund">
+                <div class="fund=text">
+                    <h2>4、では、資金はどうする？融資を受ける場合の返済を考えよう！</h2><br>
+                    <h3>金融機関から融資を受けるとして返済計画を考えましょう</h3><br>
+                    元金金等返済で毎月返済するとして計算すると…<br>
+                    借　入　金　額<input type="text" name="loanAmount">万円<br>
+                    返　済　期　間<input type="text" name="repaymentYears">年と<br>
+                    返　済　期　間<input type="text" name="repaymentMonths">ヶ月<br>
+                    元金据置期間　<input type="text" name="holdMonths">ヶ月<br>
+                    　金　　利　　<input type="text" name="interestRate">％　<br><input type="button" value="計算" onclick="calculateRepayment()"><br>
+                </div>
+                <div class="fund-result-table">
+                    全体の返済額<input type="text" name="totalRepayment"><br>
+                    そのうち利息<input type="test" name="totalInterest"><br>
+                    月々の返済額<input type="test" name="repaymentAmount">
+                </div>
+                <table class="fund-simulation-table">
+                    <thead>
+                        <tr><th></th><th></th><td>1年目</td><td>2年目</td><td>3年目</td><td>4年目</td><td>5年目</td><td>6年目</td></tr>
+                        <tr><th></th><th>年間返済額元利計</th><td><input type="text" name="yearlyRepaymentAmount_0"></td><td><input type="text" name="yearlyRepaymentAmount_1"></td><td><input type="text" name="yearlyRepaymentAmount_2"></td><td><input type="text" name="yearlyRepaymentAmount_3"></td><td><input type="text" name="yearlyRepaymentAmount_4"></td><td><input type="text" name="yearlyRepaymentAmount_5"></td></tr>
+                        <tr><th>年間返済金額</th><th>うち元金</th><td><input type="text" name="yearlyPrincipalRepayment_0"></td><td><input type="text" name="yearlyPrincipalRepayment_1"></td><td><input type="text" name="yearlyPrincipalRepayment_2"></td><td><input type="text" name="yearlyPrincipalRepayment_3"></td><td><input type="text" name="yearlyPrincipalRepayment_4"></td><td><input type="text" name="yearlyPrincipalRepayment_5"></td></tr>
+                        <tr><th>年間返済金額</th><th>うち利息分</th><td><input type="text" name="yearlyInterestRepayment_0"></td><td><input type="text" name="yearlyInterestRepayment_1"></td><td><input type="text" name="yearlyInterestRepayment_2"></td><td><input type="text" name="yearlyInterestRepayment_3"></td><td><input type="text" name="yearlyInterestRepayment_4"></td><td><input type="text" name="yearlyInterestRepayment_5"></td></tr>
+                    </thead>
+                </table>
+            </div>   
+        </div>
+        <div class="action">
+            <div class="generalexpences">
+                <div id="ge_anker"></div>
+                <div id="action-text">
+                    <form name="generalexpences">
+                        <h2>5、次に、販売費及一般管理費<br>
+                            （例えば喫茶店などサービス業の場合の計算）<br></h2>
+                            ①<br>
+                            ②<br>
+                            ③<br>
+                            ④<br>
+                    </form>
+                </div>
+                        <h2>販売費および一般管理費</h2>        
+                <table class="sellingexpences-table">
+                    <tr><th>項目</th><th>勘定科目</th><th>1年目</th><th>2年目</th><th>3年目</th><th>4年目</th><th>5年目</th><th>6年目</th></tr>
+                    <tr><td>1</td><td contenteditable="true">運送費　　　　　　　　</td><td><input type="text" name="gex1_0"></td><td><input type="text" name="gex1_1"></td><td><input type="text" name="gex1_2"></td><td><input type="text" name="gex1_3"></td><td><input type="text" name="gex1_4"></td><td><input type="text" name="gex1_5"></td></tr>
+                    <tr><td>2</td><td contenteditable="true">梱包費　　　　　　　　</td><td><input type="text" name="gex2_0"></td><td><input type="text" name="gex2_1"></td><td><input type="text" name="gex2_2"></td><td><input type="text" name="gex2_3"></td><td><input type="text" name="gex2_4"></td><td><input type="text" name="gex2_5"></td></tr>
+                    <tr><td>3</td><td contenteditable="true">広告宣伝費　　　　　　</td><td><input type="text" name="gex3_0"></td><td><input type="text" name="gex3_1"></td><td><input type="text" name="gex3_2"></td><td><input type="text" name="gex3_3"></td><td><input type="text" name="gex3_4"></td><td><input type="text" name="gex3_5"></td></tr>
+                    <tr><td>4</td><td contenteditable="true">家賃　　　　　　　　　</td><td><input type="text" name="gex4_0"></td><td><input type="text" name="gex4_1"></td><td><input type="text" name="gex4_2"></td><td><input type="text" name="gex4_3"></td><td><input type="text" name="gex4_4"></td><td><input type="text" name="gex4_5"></td></tr>
+                    <tr><td>5</td><td contenteditable="true">光熱費　　　　　　　　</td><td><input type="text" name="gex5_0"></td><td><input type="text" name="gex5_1"></td><td><input type="text" name="gex5_2"></td><td><input type="text" name="gex5_3"></td><td><input type="text" name="gex5_4"></td><td><input type="text" name="gex5_5"></td></tr>
+                    <tr><td>6</td><td contenteditable="true">通信費　　　　　　　　</td><td><input type="text" name="gex6_0"></td><td><input type="text" name="gex6_1"></td><td><input type="text" name="gex6_2"></td><td><input type="text" name="gex6_3"></td><td><input type="text" name="gex6_4"></td><td><input type="text" name="gex6_5"></td></tr>
+                    <tr><td>7</td><td contenteditable="true">租税公課　　　　　　　</td><td><input type="text" name="gex7_0"></td><td><input type="text" name="gex7_1"></td><td><input type="text" name="gex7_2"></td><td><input type="text" name="gex7_3"></td><td><input type="text" name="gex7_4"></td><td><input type="text" name="gex7_5"></td></tr>
+                    <tr><td>8</td><td contenteditable="true">　　　　　　　　　　　</td><td><input type="text" name="gex8_0"></td><td><input type="text" name="gex8_1"></td><td><input type="text" name="gex8_2"></td><td><input type="text" name="gex8_3"></td><td><input type="text" name="gex8_4"></td><td><input type="text" name="gex8_5"></td></tr>
+                    <tr><td>9</td><td contenteditable="true">　　　　　　　　　　　</td><td><input type="text" name="gex9_0"></td><td><input type="text" name="gex9_1"></td><td><input type="text" name="gex9_2"></td><td><input type="text" name="gex9_3"></td><td><input type="text" name="gex9_4"></td><td><input type="text" name="gex9_5"></td></tr>
+                    <tr><td>10</td><td contenteditable="true">　　　　　　　　　　　</td><td><input type="text" name="gex10_0"></td><td><input type="text" name="gex10_1"></td><td><input type="text" name="gex10_2"></td><td><input type="text" name="gex10_3"></td><td><input type="text" name="gex10_4"></td><td><input type="text" name="gex10_5"></td></tr>
+                    <tr><td>11</td><td contenteditable="true"></td><td><input type="text" name="gex11_0"></td><td><input type="text" name="gex11_1"></td><td><input type="text" name="gex11_2"></td><td><input type="text" name="gex11_3"></td><td><input type="text" name="gex11_4"></td><td><input type="text" name="gex11_5"></td></tr>
+                    <tr><td>12</td><td contenteditable="true"></td><td><input type="text" name="gex12_0"></td><td><input type="text" name="gex12_1"></td><td><input type="text" name="gex12_2"></td><td><input type="text" name="gex12_3"></td><td><input type="text" name="gex12_4"></td><td><input type="text" name="gex12_5"></td></tr>
+                    <tr><td>13</td><td contenteditable="true"></td><td><input type="text" name="gex13_0"></td><td><input type="text" name="gex13_1"></td><td><input type="text" name="gex13_2"></td><td><input type="text" name="gex13_3"></td><td><input type="text" name="gex13_4"></td><td><input type="text" name="gex13_5"></td></tr>
+                    <tr><td>14</td><td contenteditable="true"></td><td><input type="text" name="gex14_0"></td><td><input type="text" name="gex14_1"></td><td><input type="text" name="gex14_2"></td><td><input type="text" name="gex14_3"></td><td><input type="text" name="gex14_4"></td><td><input type="text" name="gex14_5"></td></tr>
+                    <tr><td>15</td><td contenteditable="true"></td><td><input type="text" name="gex15_0"></td><td><input type="text" name="gex15_1"></td><td><input type="text" name="gex15_2"></td><td><input type="text" name="gex15_3"></td><td><input type="text" name="gex15_4"></td><td><input type="text" name="gex15_5"></td></tr>
+                    <tr><td>16</td><td contenteditable="true"></td><td><input type="text" name="gex16_0"></td><td><input type="text" name="gex16_1"></td><td><input type="text" name="gex16_2"></td><td><input type="text" name="gex16_3"></td><td><input type="text" name="gex16_4"></td><td><input type="text" name="gex16_5"></td></tr>
+                    <tr><td>17</td><td contenteditable="true"></td><td><input type="text" name="gex17_0"></td><td><input type="text" name="gex17_1"></td><td><input type="text" name="gex17_2"></td><td><input type="text" name="gex17_3"></td><td><input type="text" name="gex17_4"></td><td><input type="text" name="gex17_5"></td></tr>
+                    <tr><td>18</td><td contenteditable="true"></td><td><input type="text" name="gex18_0"></td><td><input type="text" name="gex18_1"></td><td><input type="text" name="gex18_2"></td><td><input type="text" name="gex18_3"></td><td><input type="text" name="gex18_4"></td><td><input type="text" name="gex18_5"></td></tr>
+                    <tr><td>19</td><td contenteditable="true"></td><td><input type="text" name="gex19_0"></td><td><input type="text" name="gex19_1"></td><td><input type="text" name="gex19_2"></td><td><input type="text" name="gex19_3"></td><td><input type="text" name="gex19_4"></td><td><input type="text" name="gex19_5"></td></tr>
+                    <tr><td>20</td><td contenteditable="true"></td><td><input type="text" name="gex20_0"></td><td><input type="text" name="gex20_1"></td><td><input type="text" name="gex20_2"></td><td><input type="text" name="gex20_3"></td><td><input type="text" name="gex20_4"></td><td><input type="text" name="gex20_5"></td></tr>
+                    <tr><td>21</td><td contenteditable="true"></td><td><input type="text" name="gex21_0"></td><td><input type="text" name="gex21_1"></td><td><input type="text" name="gex21_2"></td><td><input type="text" name="gex21_3"></td><td><input type="text" name="gex21_4"></td><td><input type="text" name="gex21_5"></td></tr>
+                    <tr><td>22</td><td contenteditable="true"></td><td><input type="text" name="gex22_0"></td><td><input type="text" name="gex22_1"></td><td><input type="text" name="gex22_2"></td><td><input type="text" name="gex22_3"></td><td><input type="text" name="gex22_4"></td><td><input type="text" name="gex22_5"></td></tr>
+                    <tr><td>23</td><td contenteditable="true">ECアプリ使用料</td><td><input type="text" name="gex23_0"></td><td><input type="text" name="gex23_1"></td><td><input type="text" name="gex23_2"></td><td><input type="text" name="gex23_3"></td><td><input type="text" name="gex23_4"></td><td><input type="text" name="gex23_5"></td></tr>                            
+                    <tr><td>24</td><td contenteditable="true">販売手数料</td><td><input type="text" name="gex24_0"></td><td><input type="text" name="gex24_1"></td><td><input type="text" name="gex24_2"></td><td><input type="text" name="gex24_3"></td><td><input type="text" name="gex24_4"></td><td><input type="text" name="gex24_5"></td></tr>
+                    <tr><td>25</td><td contenteditable="true">人件費</td><td><input type="text" name="gex25_0"></td><td><input type="text" name="gex25_1"></td><td><input type="text" name="gex25_2"></td><td><input type="text" name="gex25_3"></td><td><input type="text" name="gex25_4"></td><td><input type="text" name="gex25_5"></td></tr>
+                    <tr><td>26</td><td contenteditable="true">減価償却費</td><td><input type="text" name="gex26_0"></td><td><input type="text" name="gex26_1"></td><td><input type="text" name="gex26_2"></td><td><input type="text" name="gex26_3"></td><td><input type="text" name="gex26_4"></td><td><input type="text" name="gex26_5"></td></tr>
+                    <tr><td>計</td><td contenteditable="true">販管費合計</td><td><input type="text" name="gextotal_0"></td><td><input type="text" name="gextotal_1"></td><td><input type="text" name="gextotal_2"></td><td><input type="text" name="gextotal_3"></td><td><input type="text" name="gextotal_4"></td><td><input type="text" name="gextotal_5"></td></tr>
+                </table>
+                <div>
+                    <br>販管費の合計はそれぞれの年度で--<input type="button" value="計算" onclick="fncGEX()"><br>
+                </div>
+            </div>
+        </div>
+        <div class="action">
+            <div class="pl"> 
+                <div id="pl_anker"></div>    
+                <div id="action-text">
+                    <h2 id="study">6、損益計算書はこうなります！</h2>
+                    <p><br>上の行から順番に進んでください。<br>
+                        <input type="button" value="自動計算">のボタンの行は、ここまで入力が済んでいるか、ボタンクリックで自動的に表示されます。<br>
+                        <input type="button" value="入力">のボタンの行は、数字を各項目入力してください。<br>
+                        <input type="button" value="ここをクリック">の行はボタンをクリックしてください。数値が表示されます。</p>
+                </div>
+                <table id="csv_data_table">
+                    <thead>
+                        <tr><th>項目</th><th>入力or自動計算</th><th>1年後</th><th>2年後</th><th>3年後</th><th>4年後</th><th>5年後</th><th>6年後</th></tr>
+                        <tr><th>売上高</th><td><input type="button" value="自動計算"></td><td><input type="text" name="salesAyear_0"></td><td><input type="text" name="salesAyear_1"></td><td><input type="text" name="salesAyear_2"></td><td><input type="text" name="salesAyear_3"></td><td><input type="text" name="salesAyear_4"></td><td><input type="text" name="salesAyear_5"></td></tr>
+                        <tr><th>売上原価</th><td><input type="button" value="自動計算"></td><td><input type="text" name="productcostAns_0"></td><td><input type="text" name="productcostAns_1"></td><td><input type="text" name="productcostAns_2"></td><td><input type="text" name="productcostAns_3"></td><td><input type="text" name="productcostAns_4"></td><td><input type="text" name="productcostAns_5"></td></tr>
+                        <tr><th>売上総利益</th><td><input type="button" value="自動計算"></td><td><input type="text" name="grossprofitAns_0"></td><td><input type="text" name="grossprofitAns_1"></td><td><input type="text" name="grossprofitAns_2"></td><td><input type="text" name="grossprofitAns_3"></td><td><input type="text" name="grossprofitAns_4"></td><td><input type="text" name="grossprofitAns_5"></td></tr>
+                        <tr><th>販売費及び一般管理費</th><td><input type="button" value="自動計算"></td><td><input type="text" name="gex_0"></td><td><input type="text" name="gex_1"></td><td><input type="text" name="gex_2"></td><td><input type="text" name="gex_3"></td><td><input type="text" name="gex_4"></td><td><input type="text" name="gex_5"></td></tr>
+                        <tr><th>営業利益</th><td><input type="button" value="ここをクリック" onclick="fncOPERATINGPROFIT()"></td><td><input type="text" name="operatingProfit_0"></td><td><input type="text" name="operatingProfit_1"></td><td><input type="text" name="operatingProfit_2"></td><td><input type="text" name="operatingProfit_3"></td><td><input type="text" name="operatingProfit_4"></td><td><input type="text" name="operatingProfit_5"></td></tr>
+                        <tr><th>営業外収益</th><td><input type="button" value="入力"></td><td><input type="text" name="non-operatingIncome_0"></td><td><input type="text" name="non-operatingIncome_1"></td><td><input type="text" name="non-operatingIncome_2"></td><td><input type="text" name="non-operatingIncome_3"></td><td><input type="text" name="non-operatingIncome_4"></td><td><input type="text" name="non-operatingIncome_5"></td></tr>
+                        <tr><th>利息以外の営業外費用</th><td><input type="button" value="入力"></td><td><input type="text" name="non-operatingExpences_0"></td><td><input type="text" name="non-operatingExpences_1"></td><td><input type="text" name="non-operatingExpences_2"></td><td><input type="text" name="non-operatingExpences_3"></td><td><input type="text" name="non-operatingExpences_4"></td><td><input type="text" name="non-operatingExpences_5"></td></tr>
+                        <tr><th>支払利息</th><td><input type="button" value="自動計算"></td><td><input type="text" name="interestpaid_0"></td><td><input type="text" name="interestpaid_1"></td><td><input type="text" name="interestpaid_2"></td><td><input type="text" name="interestpaid_3"></td><td><input type="text" name="interestpaid_4"></td><td><input type="text" name="interestpaid_5"></td></tr>
+                        <tr><th>経常利益</th><td><input type="button" value="ここをクリック" onclick="fncORDINARYPROFIT()"></td><td><input type="text" name="ordinaryProfit_0"></td><td><input type="text" name="ordinaryProfit_1"></td><td><input type="text" name="ordinaryProfit_2"></td><td><input type="text" name="ordinaryProfit_3"></td><td><input type="text" name="ordinaryProfit_4"></td><td><input type="text" name="ordinaryProfit_5"></td></tr>
+                        <tr><th>特別利益</th><td><input type="button" value="入力"></td><td><input type="text" name="extraordinaryProfit_0"></td><td><input type="text" name="extraordinaryProfit_1"></td><td><input type="text" name="extraordinaryProfit_2"></td><td><input type="text" name="extraordinaryProfit_3"></td><td><input type="text" name="extraordinaryProfit_4"></td><td><input type="text" name="extraordinaryProfit_5"></td></tr>
+                        <tr><th>特別損失</th><td><input type="button" value="入力"></td><td><input type="text" name="extraordinaryLoss_0"></td><td><input type="text" name="extraordinaryLoss_1"></td><td><input type="text" name="extraordinaryLoss_2"></td><td><input type="text" name="extraordinaryLoss_3"></td><td><input type="text" name="extraordinaryLoss_4"></td><td><input type="text" name="extraordinaryLoss_5"></td></tr>
+                        <tr><th>税引前当期純利益</th><td><input type="button" value="ここをクリック" onclick="fncNETINCOMEBEFORETAX()"></td><td><input type="text" name="netincomeBeforetax_0"></td><td><input type="text" name="netincomeBeforetax_1"></td><td><input type="text" name="netincomeBeforetax_2"></td><td><input type="text" name="netincomeBeforetax_3"></td><td><input type="text" name="netincomeBeforetax_4"></td><td><input type="text" name="netincomeBeforetax_5"></td></tr>
+                        <tr><th>法人税(実効税率30%として)</th><td><input type="button" value="自動計算" onclick="fncCORPORATETAX()"></td><td><input type="text" name="corporateTax_0"></td><td><input type="text" name="corporateTax_1"></td><td><input type="text" name="corporateTax_2"></td><td><input type="text" name="corporateTax_3"></td><td><input type="text" name="corporateTax_4"></td><td><input type="text" name="corporateTax_5"></td></tr>
+                        <tr><th>当期純利益</th><td><input type="button" value="自動計算" onclick="fnc"></td><td><input type="text" name="netincomeFortheperiod_0"></td><td><input type="text" name="netincomeFortheperiod_1"></td><td><input type="text" name="netincomeFortheperiod_2"></td><td><input type="text" name="netincomeFortheperiod_3"></td><td><input type="text" name="netincomeFortheperiod_4"></td><td><input type="text" name="netincomeFortheperiod_5"></td></tr>
+                    </thead>
+                    <thead>
+                        <tr><th>減価償却費</th><td><input type="button" value="自動計算"></td><td><input type="text" name="DEPRECIATION_0"></td><td><input type="text" name="DEPRECIATION_1"></td><td><input type="text" name="DEPRECIATION_2"></td><td><input type="text" name="DEPRECIATION_3"></td><td><input type="text" name="DEPRECIATION_4"></td><td><input type="text" name="DEPRECIATION_5"></td></tr>
+                        <tr><th>返済可能金額</th><td><input type="button" value="自動計算" onclick="fncREPAYABLE()"></td><td><input type="text" name="REPAYABLE_0"></td><td><input type="text" name="REPAYABLE_1"></td><td><input type="text" name="REPAYABLE_2"></td><td><input type="text" name="REPAYABLE_3"></td><td><input type="text" name="REPAYABLE_4"></td><td><input type="text" name="REPAYABLE_5"></td></tr>                        
+                        <tr><th>元金返済金額</th><td><input type="button" value="自動計算"></td><td><input type="text" name="PRINCIPAL_0"></td><td><input type="text" name="PRINCIPAL_1"></td><td><input type="text" name="PRINCIPAL_2"></td><td><input type="text" name="PRINCIPAL_3"></td><td><input type="text" name="PRINCIPAL_4"></td><td><input type="text" name="PRINCIPAL_5"></td></tr>                        
+                    </thead>
+                    <!-- <tbody></tbody> -->
+                </table>
+            </div>
+        </div>        
+        <div class="action">
+            <div class="incomeexpenditure">
+                <div id="income_anker"></div>
+                <div id="action-text">
+                    <h2 id="incomeexpenditure">7、５年間の収益計画！<br>あなたのビジョンに合っていますか？</h2>
+                </div>
+                <table id="years_pl_tabel" class="table is-bordered">
+                    <thead>
+                        <tr><th>項目</th><th>基準年度</th><th>1年後</th><th>2年後</th><th>3年後</th><th>4年後</th><th>5年後</th><th>6年後</th></tr>
+                        <tr><th>売上高</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>営業利益</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>経常利益</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>人件費</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>減価償却費</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>付加価値額</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>伸び率</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>従業員数</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>一人当り付加価値額</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>伸び率</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>法人税</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <tr><th>当期純利益</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
+                        <!-- operatingincome,ordinaryincome,labercost,depreciation,addedvalue,growwethrate,employees,corporatetax,netincome -->
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="action">
+            <h2>８、貸借対照表</h2><br>
+            <table id="balancesheet-table">
+                <thead>
+                    <tr><th>科目</th><th>スタート時</th><th>初年度</th><th>科目</th><th>スタート時</th><th>初年度</th></tr>
+                </thead>
+                <body>
+                    <tr><td contenteditable="true">Ⅰ流動資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">Ⅰ流動負債</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　現金及び預金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　支払い手形</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　受取手形</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　買掛金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　受取手形</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　短期借入金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　たな卸資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　有価証券</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">Ⅱ固定負債</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　短期貸付金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　社債</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　長期借入金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">Ⅱ固定資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　退職給付引当金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　1.有形固定資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　建物</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">Ⅲ資本</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　たな卸資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　資本金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　有価証券</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　資本準備金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　短期貸付金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　剰余金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">Ⅱ固定資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　1.有形固定資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　建物</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　機械</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　土地</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　2.無形固定資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　3.投資その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　投資有価証券</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　長期貸付金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　保証金</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　ゴルフ会員権</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">　　その他</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">Ⅲ繰延資産</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">　ー</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                    <tr><td contenteditable="true">資産合計</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td><td contenteditable="true">負債・資本合計</td><td><input type="text" name="a"></td><td><input type="text" name="a"></td></tr>
+                </body>
+            </table>
+        </div>    
+    <div>
+        <h2>　　計算シート</h2><br>
+        <table id="spread-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+                <th>G</th>
+                <th>H</th>
+                <th>I</th>
+                <th>J</th>
+                <th>K</th>
+                <th>L</th>
+                <th>M</th>
+                <th>N</th>
+                <th>O</th>
+                <th>P</th>
+                <th>Q</th>
+                <th>R</th>
+                <th>S</th>
+                <th>T</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- ... 28 more rows ... -->
+            </tbody>
+          </table>
+          
+        <script>
+            function createSheet() {
+                var ss = SpreadsheetApp.getActiveSpreadsheet();
+                var sheet = ss.insertSheet();
+                sheet.setName("My Sheet");
+                sheet.setActiveRange(sheet.getRange("A1"));
+                sheet.setRowCount(30);
+                sheet.setColumnCount(20);
+              }              
+        </script>
+        <div>
+            <input type="button" value="計算" onclick="createSheet()">
+        </div>
+    </div>
+    <div class="decisions">
+        <div class="decision">
+            <div id="dec_anker"></div>
+            <div class="action-text">
+                <h2 id="decision">７、それでは！</h2>
+            </div>
+            <img class="action-img" src="img/and.png">
+        </div>
+    </div>
+    
+
+
+
+    <footer id="site-footer">
+        <p id="copyright"><small>&copy; 2019 Itnav</small></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
