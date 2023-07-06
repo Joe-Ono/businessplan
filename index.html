@@ -174,13 +174,13 @@
                                 ②取得価格<br>
                                 ③償却法（定額法または定率法）<br>
                                 ④減価償却期間（下記リンクから償却年数を確認してください）<p>Web：<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/pdf/2100_01.pdf">国税庁、主な減価償却資産の耐用年数表</a></p><br>
-                                『建物』『建物附属設備』『構築物』『ソフトウェア』に関しては、法人も個人事業主も減価償却は定額法で計算するように定められています。<br>その他については、資産毎に定額法か定率法か選定して所轄の税務署長に届出することになります。<br>
+                                『建物』『建物附属設備』『構築物』『ソフトウェア』に関しては、法人も個人事業主も減価償却は定額法で計算するように定められています。<br>その他については、試算毎に定額法か定率法か選定して所轄の税務署長に届出することになります。<br>
                                 ここでは、便宜上全て定額法で計算します。実際は初年度は購入した日時による、月割りとなりますがこれまた便宜上1年間使用することとします。
                         <form name="depreciation">  
                             <table id="depreciation-table">
                                 <div>まずは、資産の名前と取得金額を入力</div>
                                 <tr><th>番号</th><th>品目名</th><th>取得金額</th><th>減価償却期間</th><th>初年度償却額</th><th>2年目償却額</th><th>3年目償却額</th><th>4年目償却額</th><th>5年目償却額</th><th>6年目償却額</th><th>1年目残価</th><th>2年目残価</th><th>3年目残価</th><th>4年目残価</th><th>5年目残価</th><th>6年目残価</th></tr>
-                                <tr><td>1</td><td>例）事務所<input type="text" name="asset1"></td><td><input type="text" name="residualvalue1"></td><td><input type="text" name="period1"></td><td><input type="text" name="depreciation1_1"></td><td><input type="text" name="depreciation1_2"></td><td><input type="text" name="depreciation1_3"></td><td><input type="text" name="depreciation1_4"></td><td><input type="text" name="depreciation1_5"></td><td><input type="text" name="depreciation1_6"></td><td><input type="text" name="residualvalue1_1"></td><td><input type="text" name="residualvalue1_2"></td><td><input type="text" name="residualvalue1_3"></td><td><input type="text" name="residualvalue1_4"></td><td><input type="text" name="residualvalue1_5"></td><td><input type="text" name="residualvalue1_6"></td></tr>
+                                <tr><td>1</td><td>例）店舗改装<input type="text" name="asset1"></td><td><input type="text" name="residualvalue1"></td><td><input type="text" name="period1"></td><td><input type="text" name="depreciation1_1"></td><td><input type="text" name="depreciation1_2"></td><td><input type="text" name="depreciation1_3"></td><td><input type="text" name="depreciation1_4"></td><td><input type="text" name="depreciation1_5"></td><td><input type="text" name="depreciation1_6"></td><td><input type="text" name="residualvalue1_1"></td><td><input type="text" name="residualvalue1_2"></td><td><input type="text" name="residualvalue1_3"></td><td><input type="text" name="residualvalue1_4"></td><td><input type="text" name="residualvalue1_5"></td><td><input type="text" name="residualvalue1_6"></td></tr>
                                 <tr><td>2</td><td><input type="text" name="asset2"></td><td><input type="text" name="residualvalue2"></td><td><input type="text" name="period2"></td><td><input type="text" name="depreciation2_1"></td><td><input type="text" name="depreciation2_2"></td><td><input type="text" name="depreciation2_3"></td><td><input type="text" name="depreciation2_4"></td><td><input type="text" name="depreciation2_5"></td><td><input type="text" name="depreciation2_6"></td><td><input type="text" name="residualvalue2_1"><td><input type="text" name="residualvalue2_2"></td><td><input type="text" name="residualvalue2_3"></td><td><input type="text" name="residualvalue2_4"></td><td><input type="text" name="residualvalue2_5"></td><td><input type="text" name="residualvalue2_6"></td></tr>
                                 <tr><td>3</td><td><input type="text" name="asset3"></td><td><input type="text" name="residualvalue3"></td><td><input type="text" name="period3"></td><td><input type="text" name="depreciation3_1"></td><td><input type="text" name="depreciation3_2"></td><td><input type="text" name="depreciation3_3"></td><td><input type="text" name="depreciation3_4"></td><td><input type="text" name="depreciation3_5"></td><td><input type="text" name="depreciation3_6"></td><td><input type="text" name="residualvalue3_1"><td><input type="text" name="residualvalue3_2"></td><td><input type="text" name="residualvalue3_3"></td><td><input type="text" name="residualvalue3_4"></td><td><input type="text" name="residualvalue3_5"></td><td><input type="text" name="residualvalue3_6"></td></tr>
                                 <tr><td>4</td><td><input type="text" name="asset4"></td><td><input type="text" name="residualvalue4"></td><td><input type="text" name="period4"></td><td><input type="text" name="depreciation4_1"></td><td><input type="text" name="depreciation4_2"></td><td><input type="text" name="depreciation4_3"></td><td><input type="text" name="depreciation4_4"></td><td><input type="text" name="depreciation4_5"></td><td><input type="text" name="depreciation4_6"></td><td><input type="text" name="residualvalue4_1"><td><input type="text" name="residualvalue4_2"></td><td><input type="text" name="residualvalue4_3"></td><td><input type="text" name="residualvalue4_4"></td><td><input type="text" name="residualvalue4_5"></td><td><input type="text" name="residualvalue4_6"></td></tr>
@@ -217,7 +217,6 @@
                 <div class="fund-result-table">
                     全体の返済額<input type="text" name="totalRepayment"><br>
                     そのうち利息<input type="test" name="totalInterest"><br>
-                    月々の返済額<input type="test" name="repaymentAmount">
                 </div>
                 <table class="fund-simulation-table">
                     <thead>
@@ -315,7 +314,7 @@
                 </table>
             </div>
         </div>        
-        <div class="action">
+        <!-- <div class="action">
             <div class="incomeexpenditure">
                 <div id="income_anker"></div>
                 <div id="action-text">
@@ -340,10 +339,10 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-            </div>
+            </div> -->
         </div>
         <div class="action">
-            <h2>８、貸借対照表</h2><br>
+            <h2>８、貸借対照表</h2><br><h1>　　　構築中</h1>
             <table id="balancesheet-table">
                 <thead>
                     <tr><th>科目</th><th>スタート時</th><th>初年度</th><th>科目</th><th>スタート時</th><th>初年度</th></tr>
@@ -381,226 +380,7 @@
                 </body>
             </table>
         </div>    
-    <div>
-        <!-- <h2>　　計算シート</h2><br>
-        <table id="spread-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>A</th>
-                <th>B</th>
-                <th>C</th>
-                <th>D</th>
-                <th>E</th>
-                <th>F</th>
-                <th>G</th>
-                <th>H</th>
-                <th>I</th>
-                <th>J</th>
-                <th>K</th>
-                <th>L</th>
-                <th>M</th>
-                <th>N</th>
-                <th>O</th>
-                <th>P</th>
-                <th>Q</th>
-                <th>R</th>
-                <th>S</th>
-                <th>T</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <!-- ... 28 more rows ... -->
-            </tbody>
-          </table>
-          
-        <script>
-            function createSheet() {
-                var ss = SpreadsheetApp.getActiveSpreadsheet();
-                var sheet = ss.insertSheet();
-                sheet.setName("My Sheet");
-                sheet.setActiveRange(sheet.getRange("A1"));
-                sheet.setRowCount(30);
-                sheet.setColumnCount(20);
-              }              
-        </script>
-        <div>
-            <input type="button" value="計算" onclick="createSheet()">
-        </div>
-    </div> -->
-    <div class="decisions">
-        <div class="decision">
-            <div id="dec_anker"></div>
-            <div class="action-text">
-                <h2 id="decision">７、それでは！</h2>
-            </div>
-            <img class="action-img" src="img/and.png">
-        </div>
     </div>
-    
-
-
 
     <footer id="site-footer">
         <p id="copyright"><small>&copy; 2019 Itnav</small></p>
