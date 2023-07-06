@@ -318,29 +318,36 @@ function calculateRepayment() {
     var a = parseFloat(document.getElementsByName("repaymentYears")[0].value);
     var b = parseFloat(document.getElementsByName("repaymentMonths")[0].value) || 0;
     var totalMonths = a * 12 + b;    // 返済期間を月数に変換
-    var c = parseFloat(document.getElementsByName("holdMonths")[0].value);    // 元金据え置き期間を月数に変換  
-    var r = parseFloat(document.getElementsByName("interestRate")[0].value);
+    var c = parseFloat(document.getElementsByName("holdMonths")[0].value) || 0;    // 元金据え置き期間を月数に変換  
+    var r = parseFloat(document.getElementsByName("interestRate")[0].value) || 0;
     var monthlyInterest = r / 12 / 100;    // 金利を月利に変換
     var x = parseFloat(document.getElementsByName("loanAmount")[0].value);
-    var monthlyInterestRepayment = x * 10000 * monthlyInterest;   //毎月の利息金額
-    var totalInterest = monthlyInterestRepayment * totalMonths;   //利息合計
-    var totalRepayment = x * 10000 + totalInterest;    //全体の返済額
     var monthlyPrincipalRepayment = x * 10000 / (totalMonths - c);    // 毎月の元金返済額
     var repaymentSchedule = [];    //毎月の返済額をリストにする
     var repaymentSchedulePrincipal = [];    //うち元金
     var repaymentScheduleInterest = [];     //うち利息分
+    
+    var totalRepayment = 0;
+    var totalInterest = 0;
+    
     for (var i = 0; i < c; i++) {
-        repaymentSchedule.push(Math.round(monthlyInterestRepayment));
+        var monthlyInterestRepayment = monthlyInterest * x * 10000;
         repaymentScheduleInterest.push(Math.round(monthlyInterestRepayment));
         repaymentSchedulePrincipal.push(0); 
+        repaymentSchedule.push(Math.round(monthlyInterestRepayment));
+        totalInterest += monthlyInterestRepayment;
     }
+
     for (var i = c; i < totalMonths; i++) {
-        repaymentSchedule.push(Math.round(monthlyPrincipalRepayment + monthlyInterestRepayment));
+        var borrowingBalance = x * 10000 - monthlyPrincipalRepayment * (i - c);
+        var monthlyInterestRepayment = borrowingBalance * monthlyInterest; 
         repaymentScheduleInterest.push(Math.round(monthlyInterestRepayment));
         repaymentSchedulePrincipal.push(Math.round(monthlyPrincipalRepayment));
+        repaymentSchedule.push(Math.round(monthlyPrincipalRepayment + monthlyInterestRepayment));
+        totalInterest += monthlyInterestRepayment;
     }
-    document.getElementsByName("totalRepayment")[0].value = totalRepayment.toLocaleString();
-    document.getElementsByName("totalInterest")[0].value = totalInterest.toLocaleString();
+
+    var startMonth, endMonth;
     for (var i = 0; i <= 5; i++) {
         var yearlyRepaymentAmount = 0;
         var yearlyInterestRepayment = 0;
@@ -364,7 +371,9 @@ function calculateRepayment() {
             document.getElementsByName("yearlyPrincipalRepayment_" + i)[0].value = yearlyPrincipalRepayment.toLocaleString();
             document.getElementsByName("PRINCIPAL_" + i)[0].value = yearlyPrincipalRepayment.toLocaleString();
             document.getElementsByName("yearlyInterestRepayment_" + i)[0].value = yearlyInterestRepayment.toLocaleString();
-    }    
+    }
+    document.getElementsByName("totalRepayment")[0].value = (totalInterest + x * 10000).toLocaleString();
+    document.getElementsByName("totalInterest")[0].value = totalInterest.toLocaleString();
 }
 
 function fncOPERATINGPROFIT() {
@@ -428,4 +437,3 @@ function fncNETINCOMEBEFORETAX() {
     }
     return netincomeFortheperiod;
 }
-
