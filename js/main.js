@@ -54,8 +54,8 @@ const smoothScroll = () => {
 // 1日あたりの入店客数と客単価を入力してもらって、売上を計算。減価率を仮に35％とした時の売り上げ総利益を算出
 function fncGROSSPROFIT() {
     var salesayear,a,b;
-    a = JSON.parse(document.salesayear.salesayearNoc.value);
-    b = JSON.parse(document.salesayear.salesayearCup.value);
+    a = parseFloat(document.salesayear.salesayearNoc.value) || 0;
+    b = parseFloat(document.salesayear.salesayearCup.value) || 0;
     salesayear = a * b * 26 * 12;
     document.salesayear.salesayearAns.value = salesayear;
     var productcost,salesayear;
@@ -75,8 +75,8 @@ function fncGROSSPROFIT() {
 function fncSALESAYEAR() {
     // 各年度の列をループで処理
     for (var i = 0; i <= 5; i++) {
-        var x = JSON.parse(document.getElementsByName("salesayearNoc_" + i)[0].value);
-        var y = JSON.parse(document.getElementsByName("salesayearCup_" + i)[0].value);
+        var x = parseFloat(document.getElementsByName("salesayearNoc_" + i)[0].value) || 0;
+        var y = parseFloat(document.getElementsByName("salesayearCup_" + i)[0].value) || 0;
         var a = x * y * 26 * 12;
         document.getElementsByName("salesayearAns_" + i)[0].value = a.toLocaleString();
     }
@@ -84,8 +84,8 @@ function fncSALESAYEAR() {
 
 function fncGROSSPROFIT5() {
     for (var i = 0; i <= 5; i++) {
-        var x = JSON.parse(document.getElementsByName("salesayearTarget_" + i)[0].value);
-        var y = JSON.parse(document.getElementsByName("productcostRate_" + i)[0].value);
+        var x = parseFloat(document.getElementsByName("salesayearTarget_" + i)[0].value) || 0;
+        var y = parseFloat(document.getElementsByName("productcostRate_" + i)[0].value) || 0;
         var productCOST = x * y * 0.01;
         var grossPROFIT = x - productCOST;
         var elementsproductscost = document.getElementsByName("productcostAns_" + i);
@@ -95,7 +95,7 @@ function fncGROSSPROFIT5() {
                 return function() {
                     element.value = value;
                 };
-            })(elementsproductscost[j], productCOST), 0);
+            })(elementsproductscost[j], productCOST), 0); 
         }            
         var elementsgrossprofit = document.getElementsByName("grossprofitAns_" + i);
         for (var k = 0; k < elementsgrossprofit.length; k++){
