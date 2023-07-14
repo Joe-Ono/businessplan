@@ -253,27 +253,24 @@ function fncDEPRECIATION() {
             var yearlyDepreciation = Math.round(x * rate);
             var yearlyResidualvalue = Math.round(x - yearlyDepreciation * i);
   
-        while (yearlyResidualvalue > 1) {
-            yearlyDepreciationList.push(yearlyDepreciation);
-            yearlyResidualvalueList.push(yearlyResidualvalue);
-            i++;
-            yearlyResidualvalue = Math.round(x - yearlyDepreciation * i);
+            if (i < (y - 1)) {
+                yearlyDepreciationList.push(yearlyDepreciation);
+                yearlyResidualvalueList.push(yearlyResidualvalue);
+            }   else if (i === (y - 1)) {
+                yearlyResidualvalueList.push(yearlyResidualvalue);
+                yearlyDepreciationList.push(yearlyDepreciation - 1);
+            }   else if (i > (y - 1)) {
+                    if (isNaN(parseFloat(document.getElementsByName("residualvalue" + j)[0].value)) && isNaN(parseFloat(document.getElementsByName("period" + j)[0].value))){
+                        yearlyResidualvalueList.push(0);
+                        yearlyDepreciationList.push(0); 
+                    } else { 
+                        yearlyResidualvalueList.push(1);
+                        yearlyDepreciationList.push(0); 
+                    }
+            }   
+            depreciationTotal += yearlyDepreciation;
+            residualvalueTotal += yearlyResidualvalue;    
         }
-  
-        if (yearlyResidualvalue <= 1) {
-            if (isNaN(parseFloat(document.getElementsByName("residualvalue" + j)[0].value)) && isNaN(parseFloat(document.getElementsByName("period" + j)[0].value))){
-                yearlyResidualvalueList.push(0);
-                yearlyDepreciationList.push(0);    
-            } else {
-                yearlyResidualvalueList.push(1);
-                yearlyDepreciationList.push(0);    
-            }
-        }
-
-        depreciationTotal += yearlyDepreciation;
-        residualvalueTotal += yearlyResidualvalue;
-        }
-  
         depreciationLists.push(yearlyDepreciationList);
         residualvalueLists.push(yearlyResidualvalueList);
   
@@ -281,7 +278,7 @@ function fncDEPRECIATION() {
             document.getElementsByName("depreciation" + j + "_" + i)[0].value = depreciationLists[j - 1][i - 1];
             document.getElementsByName("residualvalue" + j + "_" + i)[0].value = residualvalueLists[j - 1][i];
         }
-    }
+    }  
   
     var depreciationSUM = [];
     var residualvalueSUM = [];
