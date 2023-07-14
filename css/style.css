@@ -190,7 +190,7 @@ h1, h2, h3, .top-title {
 
 .caluculate {
     width: 80%;
-    position: absolute;
+    position: static;
     z-index: -1;
 }
 #grossprofit_table {
