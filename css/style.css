@@ -48,7 +48,7 @@ h1, h2, h3, .top-title {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    z-index: 1;
+    z-index: -1;
 }
 
 .swiper-slide {
@@ -207,7 +207,7 @@ h1, h2, h3, .top-title {
 
 .caluculate {
     width: 80%;
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 #grossprofit_table {
