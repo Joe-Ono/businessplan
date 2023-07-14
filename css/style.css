@@ -7,7 +7,6 @@ h1, h2, h3, .top-title {
     font-family: 'Caveat', serif;
 }
 
-/* Header */
 #site-header {
     display: flex;
     position: fixed;
@@ -42,7 +41,6 @@ h1, h2, h3, .top-title {
     color: #fff;
 }
 
-/* SlideShow */
 .swiper-container {
     position: relative;
     width: 100%;
@@ -103,7 +101,6 @@ h1, h2, h3, .top-title {
     margin: 2rem 0 2rem;
 }
 
-/* business */
 .businesses {
     width: 90%;
     margin: 0 auto;
@@ -115,7 +112,7 @@ h1, h2, h3, .top-title {
 
 .business {
     margin: 0 auto;
-    width: 30%;
+    width: 20%;
     min-width: 260px;
     display: flex;
     justify-content: space-between;
@@ -145,7 +142,6 @@ h1, h2, h3, .top-title {
     padding: 0 1rem;
 }
 
-/* actionss */
 .checks {
     width: 80%;
     margin: 0 auto;
@@ -192,23 +188,10 @@ h1, h2, h3, .top-title {
     flex-flow: column;
 }
 
-/* .action {
-    margin: 0 auto;
-    width: auto; 
-    min-width: 100px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column;
-    align-items: :center;
-    text-align: center;            
-    align-items: baseline;
-    padding: 0 1rem;
-} */
-
 .caluculate {
     width: 80%;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
 }
 #grossprofit_table {
     width: 120%;
@@ -236,7 +219,9 @@ h1, h2, h3, .top-title {
 }
 .sellingexpences-table {
     font-size: 12px;
-    border: 2px #808080 solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    border:2px #808080 solid;
 }
 .sellingexpences-table th, .sellingexpences-table td, .sellingexpences-table td input {
     width: 90px;
@@ -298,7 +283,6 @@ h1, h2, h3, .top-title {
     width: 120%;
     border: 2px #808080 solid;
     border-radius: 5px;
-    /* margin: 2rem 0; */
 }
 #years_pl_table th {
     width: 70px;
@@ -310,13 +294,6 @@ td, th { border: 2px #808080 solid;
 
 }
 
-/* .results {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-} */
 .result {
     margin: 0 auto;
     width: 100%;
@@ -330,7 +307,6 @@ td, th { border: 2px #808080 solid;
 .incomeexpenditure {
     margin: 0 auto;
     width: 90%;
-    /* min-width: 300px; */
     display: flex;
     justify-content:center;
     flex-flow: column;
