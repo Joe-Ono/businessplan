@@ -257,8 +257,9 @@ function fncDEPRECIATION() {
                 yearlyDepreciationList.push(yearlyDepreciation);
                 yearlyResidualvalueList.push(yearlyResidualvalue);
             }   else if (i === (y - 1)) {
+                var sum = yearlyDepreciationList.reduce((a, b) => a + b, 0);
                 yearlyResidualvalueList.push(yearlyResidualvalue);
-                yearlyDepreciationList.push(yearlyDepreciation - 1);
+                yearlyDepreciationList.push(x - 1 - sum);
             }   else if (i > (y - 1)) {
                     if (isNaN(parseFloat(document.getElementsByName("residualvalue" + j)[0].value)) && isNaN(parseFloat(document.getElementsByName("period" + j)[0].value))){
                         yearlyResidualvalueList.push(0);
