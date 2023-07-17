@@ -18,7 +18,7 @@ h1, h2, h3, .top-title {
 }
 
 #site-logo {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 #site-logo a {
@@ -33,7 +33,7 @@ h1, h2, h3, .top-title {
 }
 
 .nav-menu-items {
-    margin-right: 30px;
+    margin-right: 35px;
 }
 
 .nav-menu-items a {
@@ -87,7 +87,6 @@ h1, h2, h3, .top-title {
     z-index: 1;
 }
 
-/* Description */
 .description-text {
     text-align: center;
     line-height: 3rem;
@@ -190,6 +189,7 @@ h1, h2, h3, .top-title {
 
 .caluculate {
     width: 80%;
+    border: 10px;
     position: static;
     z-index: -1;
 }
