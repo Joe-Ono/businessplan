@@ -135,7 +135,7 @@
                 </table><br>計算上の年間売上は--<input type="button" value="計算" onclick="fncSALESAYEAR()"><br>
                 調整した売上目標と商品原価率を記入した売上総利益の計算結果は<input type="button" value="計算" onclick="fncGROSSPROFIT5()"><br>
                 <div class="sales">
-                    <h3>売上の考え方については、こちらで検討<br><p>Web：<a href="https://www.jfc.go.jp/n/info/pdf/topics_130802a.pdf"target="_blank">いくつかの業種例（日本政策金融公庫より）</a></p></h3>
+                    <h3>売上の考え方については、こちらでも検討できます<br><p>Web：<a href="https://www.jfc.go.jp/n/info/pdf/topics_130802a.pdf"target="_blank">いくつかの業種例（日本政策金融公庫より）</a></p></h3>
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@
                                 ここでは、便宜上全て定額法で計算します。実際は初年度は購入した日時による、月割りとなりますがこれまた便宜上1年間使用することとします。
                         <form name="depreciation">  
                             <table id="depreciation-table">
-                                <div>まずは、資産の名前と取得金額を入力</div>
+                                <div>まずは、資産の名前と取得金額、減価償却期間を入力してください</div>
                                 <tr><th>番号</th><th>品目名</th><th>取得金額</th><th>減価償却期間</th><th>初年度償却額</th><th>2年目償却額</th><th>3年目償却額</th><th>4年目償却額</th><th>5年目償却額</th><th>6年目償却額</th><th>1年目残価</th><th>2年目残価</th><th>3年目残価</th><th>4年目残価</th><th>5年目残価</th><th>6年目残価</th></tr>
                                 <tr><td>1</td><td>例）店舗改装<input type="text" name="asset1"></td><td><input type="text" name="residualvalue1"></td><td><input type="text" name="period1"></td><td><input type="text" name="depreciation1_1"></td><td><input type="text" name="depreciation1_2"></td><td><input type="text" name="depreciation1_3"></td><td><input type="text" name="depreciation1_4"></td><td><input type="text" name="depreciation1_5"></td><td><input type="text" name="depreciation1_6"></td><td><input type="text" name="residualvalue1_1"></td><td><input type="text" name="residualvalue1_2"></td><td><input type="text" name="residualvalue1_3"></td><td><input type="text" name="residualvalue1_4"></td><td><input type="text" name="residualvalue1_5"></td><td><input type="text" name="residualvalue1_6"></td></tr>
                                 <tr><td>2</td><td><input type="text" name="asset2"></td><td><input type="text" name="residualvalue2"></td><td><input type="text" name="period2"></td><td><input type="text" name="depreciation2_1"></td><td><input type="text" name="depreciation2_2"></td><td><input type="text" name="depreciation2_3"></td><td><input type="text" name="depreciation2_4"></td><td><input type="text" name="depreciation2_5"></td><td><input type="text" name="depreciation2_6"></td><td><input type="text" name="residualvalue2_1"><td><input type="text" name="residualvalue2_2"></td><td><input type="text" name="residualvalue2_3"></td><td><input type="text" name="residualvalue2_4"></td><td><input type="text" name="residualvalue2_5"></td><td><input type="text" name="residualvalue2_6"></td></tr>
@@ -204,8 +204,8 @@
         <div class="action">
             <div id="fund">
                 <div class="fund=text">
-                    <h2>3、では、資金はどうする？融資を受ける場合の返済を考えよう！</h2><br>
-                    <h3>金融機関から融資を受けるとして返済計画を考えましょう</h3><br>
+                    <h2>3、では、資金はどうする？融資を受ける場合の返済を考えよう！<br>
+                    金融機関から融資を受けるとして返済計画を考えましょう</h2><br>
                     元金均等返済で毎月返済するとして計算すると…<br>
                     借　入　金　額<input type="text" name="loanAmount">万円<br>
                     返　済　期　間<input type="text" name="repaymentYears">年と<br>
@@ -239,13 +239,13 @@
                             ③人件費…給料、法定福利費、退職給付引当金、福利厚生費、研修費、リクルート…<br>
                             ④物流費…梱包費、運送費、倉庫賃料…<br>
                             ⑤販売手数料…代理店手数料、ECサイト使用料、クレカ手数料、キャッシュレス手数料、<br>
-                            ⑥一般管理費…役員報酬、家賃、旅費交通費、通信費、光熱費、消耗品費、修繕費、減価償却費、雑費…<br>
-                        等々…<br>
+                            ⑥一般管理費…役員報酬、家賃、旅費交通費、通信費、光熱費、消耗品費、修繕費、減価償却費、雑費…等々…<br>
+                            1-25に科目と年毎の金額を入力してください。表示されている科目も書き換え可能です。<br>26の減価償却費のみ前出の『2、開業するのに必要な資産は』から自動計算結果が表示されます。
                     </form>    
                 </div>
                         <h2>販売費および一般管理費</h2>        
                 <table class="sellingexpences-table">
-                    <tr><th>項目</th><th>勘定科目（1-25入力）</th><th>1年目</th><th>2年目</th><th>3年目</th><th>4年目</th><th>5年目</th><th>6年目</th></tr>
+                    <tr><th>番号</th><th>勘定科目（1-25入力）</th><th>1年目</th><th>2年目</th><th>3年目</th><th>4年目</th><th>5年目</th><th>6年目</th></tr>
                     <tr><td>1</td><td contenteditable="true">運送費　　　　　　　　</td><td><input type="text" name="gex1_0"></td><td><input type="text" name="gex1_1"></td><td><input type="text" name="gex1_2"></td><td><input type="text" name="gex1_3"></td><td><input type="text" name="gex1_4"></td><td><input type="text" name="gex1_5"></td></tr>
                     <tr><td>2</td><td contenteditable="true">梱包費　　　　　　　　</td><td><input type="text" name="gex2_0"></td><td><input type="text" name="gex2_1"></td><td><input type="text" name="gex2_2"></td><td><input type="text" name="gex2_3"></td><td><input type="text" name="gex2_4"></td><td><input type="text" name="gex2_5"></td></tr>
                     <tr><td>3</td><td contenteditable="true">広告宣伝費　　　　　　</td><td><input type="text" name="gex3_0"></td><td><input type="text" name="gex3_1"></td><td><input type="text" name="gex3_2"></td><td><input type="text" name="gex3_3"></td><td><input type="text" name="gex3_4"></td><td><input type="text" name="gex3_5"></td></tr>
@@ -267,7 +267,7 @@
                     <tr><td>19</td><td contenteditable="true"></td><td><input type="text" name="gex19_0"></td><td><input type="text" name="gex19_1"></td><td><input type="text" name="gex19_2"></td><td><input type="text" name="gex19_3"></td><td><input type="text" name="gex19_4"></td><td><input type="text" name="gex19_5"></td></tr>
                     <tr><td>20</td><td contenteditable="true"></td><td><input type="text" name="gex20_0"></td><td><input type="text" name="gex20_1"></td><td><input type="text" name="gex20_2"></td><td><input type="text" name="gex20_3"></td><td><input type="text" name="gex20_4"></td><td><input type="text" name="gex20_5"></td></tr>
                     <tr><td>21</td><td contenteditable="true"></td><td><input type="text" name="gex21_0"></td><td><input type="text" name="gex21_1"></td><td><input type="text" name="gex21_2"></td><td><input type="text" name="gex21_3"></td><td><input type="text" name="gex21_4"></td><td><input type="text" name="gex21_5"></td></tr>
-                    <tr><td>22</td><td contenteditable="true">管理諸費（税理士）</td><td><input type="text" name="gex22_0"></td><td><input type="text" name="gex22_1"></td><td><input type="text" name="gex22_2"></td><td><input type="text" name="gex22_3"></td><td><input type="text" name="gex22_4"></td><td><input type="text" name="gex22_5"></td></tr>
+                    <tr><td>22</td><td contenteditable="true"></td><td><input type="text" name="gex22_0"></td><td><input type="text" name="gex22_1"></td><td><input type="text" name="gex22_2"></td><td><input type="text" name="gex22_3"></td><td><input type="text" name="gex22_4"></td><td><input type="text" name="gex22_5"></td></tr>
                     <tr><td>23</td><td contenteditable="true">ECアプリ使用料</td><td><input type="text" name="gex23_0"></td><td><input type="text" name="gex23_1"></td><td><input type="text" name="gex23_2"></td><td><input type="text" name="gex23_3"></td><td><input type="text" name="gex23_4"></td><td><input type="text" name="gex23_5"></td></tr>                            
                     <tr><td>24</td><td contenteditable="true">販売手数料</td><td><input type="text" name="gex24_0"></td><td><input type="text" name="gex24_1"></td><td><input type="text" name="gex24_2"></td><td><input type="text" name="gex24_3"></td><td><input type="text" name="gex24_4"></td><td><input type="text" name="gex24_5"></td></tr>
                     <tr><td>25</td><td contenteditable="true">人件費</td><td><input type="text" name="gex25_0"></td><td><input type="text" name="gex25_1"></td><td><input type="text" name="gex25_2"></td><td><input type="text" name="gex25_3"></td><td><input type="text" name="gex25_4"></td><td><input type="text" name="gex25_5"></td></tr>
@@ -316,33 +316,7 @@
                 </table>
             </div>
         </div>        
-        <!-- <div class="action">
-            <div class="incomeexpenditure">
-                <div id="income_anker"></div>
-                <div id="action-text">
-                    <h2 id="incomeexpenditure">7、５年間の収益計画！<br>あなたのビジョンに合っていますか？</h2>
-                </div>
-                <table id="years_pl_tabel" class="table is-bordered">
-                    <thead>
-                        <tr><th>項目</th><th>基準年度</th><th>1年後</th><th>2年後</th><th>3年後</th><th>4年後</th><th>5年後</th><th>6年後</th></tr>
-                        <tr><th>売上高</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>営業利益</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>経常利益</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>人件費</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>減価償却費</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>付加価値額</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>伸び率</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>従業員数</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>一人当り付加価値額</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>伸び率</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>法人税</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <tr><th>当期純利益</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th><th>0</th></tr>
-                        <!-- operatingincome,ordinaryincome,labercost,depreciation,addedvalue,growwethrate,employees,corporatetax,netincome -->
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div> -->
-        </div>
+        
         <div class="action">
             <h2>８、貸借対照表</h2><br><h1>　　　構築中</h1>
             <table id="balancesheet-table">
@@ -389,7 +363,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main1.js"></script>
 
 </body>
 </html>
