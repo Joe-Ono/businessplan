@@ -99,6 +99,10 @@ h1, h2, h3, .top-title {
     text-align: center;
     margin: 2rem 0 2rem;
 }
+#attention {
+    text-align: center;
+    margin: 2rem 0 2rem;    
+}
 
 .businesses {
     width: 90%;
