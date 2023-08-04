@@ -88,23 +88,11 @@ function fncGROSSPROFIT5() {
         var y = parseFloat(document.getElementsByName("productcostRate_" + i)[0].value) || 0;
         var productCOST = x * y * 0.01;
         var grossPROFIT = x - productCOST;
-        var elementsproductscost = document.getElementsByName("productcostAns_" + i);
         document.getElementsByName("salesAyear_" + i)[0].value = x.toLocaleString(); 
-        for (var j = 0; j < elementsproductscost.length; j++){
-            setTimeout((function(element, value) {
-                return function() {
-                    element.value = value;
-                };
-            })(elementsproductscost[j], productCOST), 0); 
-        }            
-        var elementsgrossprofit = document.getElementsByName("grossprofitAns_" + i);
-        for (var k = 0; k < elementsgrossprofit.length; k++){
-            setTimeout((function(element, value) {
-                return function() {
-                    element.value = value;
-                };
-            })(elementsgrossprofit[k], grossPROFIT), 0);
-        }
+        document.getElementsByName("productcostAns_" + i)[0].value = productCOST.toLocaleString();
+        document.getElementsByName("grossprofitAns_" + i)[0].value = grossPROFIT.toLocaleString();
+        document.getElementsByName("productcost_" + i)[0].value = productCOST;
+        document.getElementsByName("grossprofit_" + i)[0].value = grossPROFIT;
     }
     return grossPROFIT;
 }
@@ -311,6 +299,7 @@ function fncDEPRECIATION() {
         document.getElementsByName("DEPRECIATION_" + (i - 1))[0].value = depreciationSUM[i - 1];
     }
 }
+
   
 function calculateRepayment() {
     var a = parseFloat(document.getElementsByName("repaymentYears")[0].value);
@@ -376,7 +365,7 @@ function calculateRepayment() {
 
 function fncOPERATINGPROFIT() {
     for (var i = 0; i<= 5; i++) {
-        var a = parseFloat(document.getElementsByName("grossprofitAns_" + i)[0].value);
+        var a = parseFloat(document.getElementsByName("grossprofit_" + i)[0].value);
         var b = parseFloat(document.getElementsByName("gex_" + i)[0].value);
         if(!isNaN(a) && !isNaN(b)){
             var operatingProfit = a - b;
@@ -421,7 +410,7 @@ function fncNETINCOMEBEFORETAX() {
         c = isNaN(c) ? 0 : c;
         d = isNaN(d) ? 0 : d;
             netincomeBeforetax = a + b - c;
-            if (netincomeBeforetax < 0) {
+            if (netincomeBeforetax <= 0) {
                 corporateTax = 0;
             } else {
                 corporateTax = (a + b - c) * 0.3;
