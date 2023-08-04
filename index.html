@@ -27,7 +27,6 @@
         </nav>
     </header>
 
-    <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="img/wannado.png"></div>
@@ -101,8 +100,10 @@
         </div>
     </div>
                 
-    <h2 class="sub-title">Let's try！</h2>
-    <h3 id="attention"><a href="websample.pdf#page=1" target="_blank">使用例はこちら　</a>（数字の入力は、半角にてお願いします。）</h3>
+    <h2 class="sub-title">Let's try！<br></h2>
+    <h3 id="attention"><a href="websampleA.pdf#page=1" target="_blank">＊ 使用例はこちら(パターンA)</a><br>
+    <a href="websampleB.pdf#page=1" target="_blank">＊ 使用例はこちら(パターンB)</a><br>（数字の入力は、半角にてお願いします。）</h3>
+    
     <div class="actions">
         <div class="action">
             <div class="caluculate">
@@ -111,9 +112,9 @@
                         <h2>1、先ずは年間の売上と売上原価から<br>
                         例えば喫茶店などサービス業の場合の計算<br>（週１日定休日があるとして）<br></h2>
                         「年間売上　＝　来店数/1日　ｘ　客単価　ｘ　26日/月　ｘ　12ヶ月」<br>
-                        　来　店　客　数/　1日:<input type="text" name="salesayearNoc">-<br>
-                        　　客　　単　　価　　:<input type="text" name="salesayearCup">-<input type="button" value="計算" onclick="fncGROSSPROFIT()"><br>
-                        　　年　間　売　上　　:<input type="text" name="salesayearAns"><br>
+                        　来　店　客　数/　1日:<input type="text" name="salesayearNoc">人-<br>
+                        　　客　　単　　価　　:<input type="text" name="salesayearCup">円--<input type="button" value="計算" onclick="fncGROSSPROFIT()"><br>
+                        　　年　間　売　上　　:<input type="text" name="salesayearAns">円<br>
                         珈琲豆原価30%、廃棄率4%、開発使用1%で商品原価35%で計算すると<br>
                         年　間　売　上　原　価:<input type="text" name="productcostAns"><br>
                         　売　上　総　利　益　:<input type="text" name="grossprofitAns">
@@ -172,7 +173,7 @@
                                 ①減価償却資産の品目（店舗内装、エスプレッソマシン、パソコン等）<br>
                                 ②取得価格<br>
                                 ③償却法（定額法または定率法）<br>
-                                ④減価償却期間（下記リンクから償却年数を確認してください）<p>Web：<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/pdf/2100_01.pdf">国税庁、主な減価償却資産の耐用年数表</a><br>または、webで『資産の品目名、減価償却、耐用年数』で検索!</p><br>
+                                ④減価償却期間（下記リンクから償却年数を確認してください）<p>Web：<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/pdf/2100_01.pdf">国税庁、主な減価償却資産の耐用年数表</a><br>または、web検索で”資産の品目名、減価償却、耐用年数”でチェック!</p><br>
                                 『建物』『建物附属設備』『構築物』『ソフトウェア』に関しては、法人も個人事業主も減価償却は定額法で計算するように定められています。<br>その他については、試算毎に定額法か定率法か選定して所轄の税務署長に届出することになります。<br>
                                 ここでは、便宜上全て定額法で計算します。実際は初年度は購入した日時による、月割りとなりますがこれまた便宜上1年間使用することとします。
                         <form name="depreciation">  
@@ -208,8 +209,8 @@
                     金融機関から融資を受けるとして返済計画を考えましょう</h2><br>
                     元金均等返済で毎月返済するとして計算すると…<br>
                     借　入　金　額<input type="text" name="loanAmount">万円<br>
-                    返　済　期　間<input type="text" name="repaymentYears">年と<br>
-                    返　済　期　間<input type="text" name="repaymentMonths">ヶ月<br>
+                    返済期間(年数)<input type="text" name="repaymentYears">年と<br>
+                    返済期間(月数)<input type="text" name="repaymentMonths">ヶ月<br>
                     元金据置期間　<input type="text" name="holdMonths">ヶ月<br>
                     　金　　利　　<input type="text" name="interestRate">％　<br><input type="button" value="計算" onclick="calculateRepayment()"><br>
                 </div>
@@ -240,7 +241,7 @@
                             ④物流費…梱包費、運送費、倉庫賃料…<br>
                             ⑤販売手数料…代理店手数料、ECサイト使用料、クレカ手数料、キャッシュレス手数料、<br>
                             ⑥一般管理費…役員報酬、家賃、旅費交通費、通信費、光熱費、消耗品費、修繕費、減価償却費、雑費…等々…<br>
-                            1-25に科目と年毎の金額を入力してください。表示されている科目も書き換え可能です。<br>*26の減価償却費のみ前出の『2、開業するのに必要な資産は』から自動計算結果が表示されます。
+                            1-25に科目と年毎の金額を入力してください。表示されている科目も書き換え可能です。<br>＊26の減価償却費のみ前出の『2、開業するのに必要な資産は』から自動計算結果が表示されます。
                     </form>    
                 </div>
                         <h2>販売費および一般管理費</h2>        
@@ -271,7 +272,7 @@
                     <tr><td>23</td><td contenteditable="true">ECアプリ使用料</td><td><input type="text" name="gex23_0"></td><td><input type="text" name="gex23_1"></td><td><input type="text" name="gex23_2"></td><td><input type="text" name="gex23_3"></td><td><input type="text" name="gex23_4"></td><td><input type="text" name="gex23_5"></td></tr>                            
                     <tr><td>24</td><td contenteditable="true">販売手数料</td><td><input type="text" name="gex24_0"></td><td><input type="text" name="gex24_1"></td><td><input type="text" name="gex24_2"></td><td><input type="text" name="gex24_3"></td><td><input type="text" name="gex24_4"></td><td><input type="text" name="gex24_5"></td></tr>
                     <tr><td>25</td><td contenteditable="true">人件費</td><td><input type="text" name="gex25_0"></td><td><input type="text" name="gex25_1"></td><td><input type="text" name="gex25_2"></td><td><input type="text" name="gex25_3"></td><td><input type="text" name="gex25_4"></td><td><input type="text" name="gex25_5"></td></tr>
-                    <tr><td>26*</td><td>減価償却費（自動計算）</td><td><input type="text" name="gex26_0"></td><td><input type="text" name="gex26_1"></td><td><input type="text" name="gex26_2"></td><td><input type="text" name="gex26_3"></td><td><input type="text" name="gex26_4"></td><td><input type="text" name="gex26_5"></td></tr>
+                    <tr><td>26＊</td><td>減価償却費（自動計算）</td><td><input type="text" name="gex26_0"></td><td><input type="text" name="gex26_1"></td><td><input type="text" name="gex26_2"></td><td><input type="text" name="gex26_3"></td><td><input type="text" name="gex26_4"></td><td><input type="text" name="gex26_5"></td></tr>
                     <tr><td>計</td><td>販管費合計</td><td><input type="text" name="gextotal_0"></td><td><input type="text" name="gextotal_1"></td><td><input type="text" name="gextotal_2"></td><td><input type="text" name="gextotal_3"></td><td><input type="text" name="gextotal_4"></td><td><input type="text" name="gextotal_5"></td></tr>
                 </table>
                 <div>
@@ -293,8 +294,8 @@
                     <thead>
                         <tr><th>項目</th><th>入力or自動計算</th><th>1年後</th><th>2年後</th><th>3年後</th><th>4年後</th><th>5年後</th><th>6年後</th></tr>
                         <tr><th>売上高</th><td><input type="button" value="自動計算"></td><td><input type="text" name="salesAyear_0"></td><td><input type="text" name="salesAyear_1"></td><td><input type="text" name="salesAyear_2"></td><td><input type="text" name="salesAyear_3"></td><td><input type="text" name="salesAyear_4"></td><td><input type="text" name="salesAyear_5"></td></tr>
-                        <tr><th>売上原価</th><td><input type="button" value="自動計算"></td><td><input type="text" name="productcostAns_0"></td><td><input type="text" name="productcostAns_1"></td><td><input type="text" name="productcostAns_2"></td><td><input type="text" name="productcostAns_3"></td><td><input type="text" name="productcostAns_4"></td><td><input type="text" name="productcostAns_5"></td></tr>
-                        <tr><th>売上総利益</th><td><input type="button" value="自動計算"></td><td><input type="text" name="grossprofitAns_0"></td><td><input type="text" name="grossprofitAns_1"></td><td><input type="text" name="grossprofitAns_2"></td><td><input type="text" name="grossprofitAns_3"></td><td><input type="text" name="grossprofitAns_4"></td><td><input type="text" name="grossprofitAns_5"></td></tr>
+                        <tr><th>売上原価</th><td><input type="button" value="自動計算"></td><td><input type="text" name="productcost_0"></td><td><input type="text" name="productcost_1"></td><td><input type="text" name="productcost_2"></td><td><input type="text" name="productcost_3"></td><td><input type="text" name="productcost_4"></td><td><input type="text" name="productcost_5"></td></tr>
+                        <tr><th>売上総利益</th><td><input type="button" value="自動計算"></td><td><input type="text" name="grossprofit_0"></td><td><input type="text" name="grossprofit_1"></td><td><input type="text" name="grossprofit_2"></td><td><input type="text" name="grossprofit_3"></td><td><input type="text" name="grossprofit_4"></td><td><input type="text" name="grossprofit_5"></td></tr>
                         <tr><th>販売費及び一般管理費</th><td><input type="button" value="自動計算"></td><td><input type="text" name="gex_0"></td><td><input type="text" name="gex_1"></td><td><input type="text" name="gex_2"></td><td><input type="text" name="gex_3"></td><td><input type="text" name="gex_4"></td><td><input type="text" name="gex_5"></td></tr>
                         <tr><th>営業利益</th><td><input type="button" value="ここをクリック" onclick="fncOPERATINGPROFIT()"></td><td><input type="text" name="operatingProfit_0"></td><td><input type="text" name="operatingProfit_1"></td><td><input type="text" name="operatingProfit_2"></td><td><input type="text" name="operatingProfit_3"></td><td><input type="text" name="operatingProfit_4"></td><td><input type="text" name="operatingProfit_5"></td></tr>
                         <tr><th>営業外収益</th><td><input type="button" value="入力"></td><td><input type="text" name="non-operatingIncome_0"></td><td><input type="text" name="non-operatingIncome_1"></td><td><input type="text" name="non-operatingIncome_2"></td><td><input type="text" name="non-operatingIncome_3"></td><td><input type="text" name="non-operatingIncome_4"></td><td><input type="text" name="non-operatingIncome_5"></td></tr>
